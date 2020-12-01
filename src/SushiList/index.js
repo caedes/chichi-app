@@ -1,12 +1,16 @@
 import { arrayOf, number, shape, string } from "prop-types";
 
+import { ListItem, VerticalList } from "./styles";
+
 export default function SushiList({ sushis }) {
   return (
-    <ul>
+    <VerticalList>
       {sushis.map(({ id, title }) => (
-        <li key={id}>{title}</li>
+        <ListItem key={id} id={id}>
+          {title}
+        </ListItem>
       ))}
-    </ul>
+    </VerticalList>
   );
 }
 

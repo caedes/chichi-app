@@ -45,6 +45,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `yarn commit`
+
+Git commit through [`git-cz`](https://www.npmjs.com/package/git-cz).
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

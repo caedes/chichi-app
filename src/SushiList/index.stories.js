@@ -1,4 +1,5 @@
 import SushiList from "./";
+import { listOfSushis, listOfOneSushi } from "../fixtures/sushis";
 
 const csf = {
   title: "SushiList",
@@ -6,12 +7,8 @@ const csf = {
 };
 export default csf;
 
-const sushis = new Array(8).fill(null).map((_sushi, id) => ({
-  id,
-  title: `Maki ${id}`,
-  description: "poisson, riz",
-}));
-
 export const Default = () => <SushiList />;
 
-export const WithSomeSushis = () => <SushiList sushis={sushis} />;
+export const WithSomeSushis = () => <SushiList sushis={listOfSushis} />;
+
+export const WithOneSushi = () => <SushiList sushis={listOfOneSushi} />;

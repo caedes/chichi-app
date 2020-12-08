@@ -7,12 +7,12 @@ import {
   Typography,
 } from "@material-ui/core";
 import { AddShoppingCart } from "@material-ui/icons";
-import { string } from "prop-types";
+import { number, string } from "prop-types";
 
 import PlaceholderCardMedia from "../PlaceholderCardMedia";
 import useStyles from "./styles";
 
-export default function SushiCard({ image, title, description }) {
+export default function SushiCard({ id, image, title, description }) {
   const classes = useStyles();
 
   return (
@@ -42,11 +42,14 @@ export default function SushiCard({ image, title, description }) {
   );
 }
 
-SushiCard.propTypes = {
+export const types = {
+  id: number.isRequired,
   title: string.isRequired,
   description: string.isRequired,
   image: string,
 };
+
+SushiCard.propTypes = types;
 
 SushiCard.propTypes = {
   image: null,
